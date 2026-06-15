@@ -18,5 +18,4 @@ Le service "adminer" :
 Ce service utilise l'image "adminer", et nomme son container "symfony_adminer". Il restart toujours son container si il s'arrête. Il est sur le port "8080" sur l'host "8081". Ce service a une dépendence, le service "database", et ne démarrera que lorsque ce service aura démarré. Il est sur le network "symfony_network" et peut donc communiquer avec tous les autres services sur ce même network.
 
 Le service "phpmyadmin" :
-
-
+Ce service utilise l'image "phpmyadmin" et nomme son container "symfony_phpmyadmin". Ce service restart toujours lorsqu'il s'arrête. Il est sur l'host 8082 au port 80. Il possède plusieurs variables d'environement comme "database". Ce service dépend du service "database" et attend que ce service démarre avant de démarrer. Il est sur le network "symfony_network" et peut donc communiquer avec tous les autres services sur ce même network, et possède un volume nommé "phpmyadmin_data".
