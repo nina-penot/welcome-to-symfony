@@ -52,7 +52,7 @@ services:
       - symfony_network
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin
+    image: phpmyadmin
     container_name: symfony_phpmyadmin
     restart: always
     ports:
